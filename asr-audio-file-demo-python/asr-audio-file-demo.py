@@ -374,7 +374,9 @@ def dotransbytaskid(task_id_0,tf):
     while run:
         time.sleep(5)
         text_result = getText(appkey, task_id_tmp)
-        print("while getText ",text_result)
+        print("while getText data ",text_result)
+        print("while getText utf8 ",text_result.decode('utf-8'))
+
         #print text_result
         error_code=geterrorcode(text_result)
         if error_code is None or error_code!=0:
